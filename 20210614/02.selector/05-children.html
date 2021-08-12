@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            li > p {color: blue;}
+            /*
+            자식 선택자는 부모태그 > 자식태그 방식으로 입력
+            두 개 이상의 계층도 지정 가능 (단, > 선택자의 경우는 맞닿아 있는 관계가 아니라면 적용x)
+            ul > li > p
+            */
+        </style>
+    </head>
+    <body>
+        <h1>여행지 목록</h1>
+        <ul>
+            <li><p>7월 : 강원도</p></li>
+            <li><p>8월 : 울산</p></li>
+        </ul>
+        <p>9월 울릉로는 미정입니다.</p>
+    </body>
+</html>
+<!--
+    body의 자식태그 : h1, ul, p
+    body의 자손 : li, 7,8월 p
+    
+    ul의 자식 : li
+
+-->

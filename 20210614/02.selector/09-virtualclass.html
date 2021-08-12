@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {margin: 0;}
+            /*
+            주로 사용자의 상호작용에 반응했을 때 주로 a태그에 많이 사용 (a에만 걸리는 것 x)
+
+            a: hover - 마우스를 a 태그에 가져갓을 때
+            a: actvie - 클릭했을 때 그 순간 적용할 변화를 설정
+            a: link - 클릭한 적이 없는 상태의 a 태그의 적용할 css를 설정
+            a: visited - 방문한 a태그에 적용할 css설정
+            */
+            a:hover{color: red;}
+            a:active{color: yellow;}
+            a:link{color:salmon;}
+            a:visited{color: green;}
+            h1:active{color: bisque;}
+        </style>
+    </head>
+    <body>
+        <h1>한국ICT인재개발원</h1>
+        <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">강의소개</a></li>
+            <li><a href="http://www.google.com">문의하기</a></li>
+        </ul>
+
+    </body>
+</html>

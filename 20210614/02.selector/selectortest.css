@@ -1,0 +1,10 @@
+ul .java{ border: 1px solid #000; color: red; }
+ul .python{ border: 1px solid #0777; color: green;}
+ul .cpp{border: 1px solid rgba(58, 7, 243, 0.133); color: yellow;}
+
+#container > h1 {color: blue;}
+#container > h1 + p {color: black; background-color: aqua;}
+p > span {color: red;}
+.java > p {color :rgba(58, 7, 243, 0.133);}
+.python > p {color : black;}
+.java > h2 > p {color: green;}
