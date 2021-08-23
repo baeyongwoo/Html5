@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+    * { margin: 0; padding: 0;}
+    body { font:12px "굴림", Gulim;
+        margin: 20px; width: 500px; height: 500px;}
+
+    #header{border: 2px solid red; width: 500px; height: 100px;}
+
+    #body{position: relative; left: 0px; top: 0px; border: 2px solid blue; width: 500px; height: 300px;}
+    #footer{clear:both; border: 2px dashed green; width: 500px; height: 100px; 
+    }
+    .left{ position: absolute; left: 0px; top: 0px; width: 150px; height: 300px;
+        border: 1px solid red;  }
+    .right{position: absolute; left: 150px; top: 0px; width: 350px; height: 300px;
+        border: 1px solid blue;
+    }
+
+</style>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <div id="header">
+        헤더가 들어갈 자리입니다.
+    </div>
+    <div id="body">
+       <div class="left">
+           <p>왼쪽 창</p>
+       </div>
+       <div class="right">
+           <p>오른쪽 창</p>
+       </div>
+    </div>
+    <div id="footer">
+        푸터가 들어갈 자리입니다,
+    </div>
+</body>
+</html>
