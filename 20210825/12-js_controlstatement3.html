@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    // 100부터 1까지 내림차순으로 2의 배수(짝수만) 출력하고, 개행까지
+    for(var i = 100; i > 1; i--){
+        if(i%2 ==0){
+            document.write(i + "</br>");
+        }
+    }
+    document.write("-----------------</br>");
+    var j = 100;
+    while (j > 1) {
+        if(j%2 ==0){
+            document.write(j + "</br>");
+        }
+        j--;
+    }
+
+    document.write("-----------------</br>");
+    var i = prompt("1부터 몇까지 출력하시겠습니까? (2의 배수)", "0");
+
+    for(var j = 1; j <= i; j++){
+        if(j%2==0){
+            document.write(j + "</br>");
+        }
+    }
+
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>

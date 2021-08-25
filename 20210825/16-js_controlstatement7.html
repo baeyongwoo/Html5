@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    //별찍기
+    // *
+    // **
+    // ***
+    // ****
+
+    for(var i = 0; i < 4; i++){
+        for(var j = 0; j < i+ 1; j++){
+            document.write("*");
+        }
+        document.write("</br>");
+    }
+
+    /*
+    ****
+    ***
+    **
+    *
+    */
+    
+    for(var i = 1; i < 4; i++){
+        for(var j = 0; j < 4 -i; j++){
+            document.write("*");
+        }
+        document.write("</br>");
+    }
+
+    /*
+            *
+           ***
+          *****
+         ******* 
+    */
+
+   var dan = prompt("피라미드를 몇층까지 출력할까요?")  //4
+   parent(dan);
+   for(var i = 0 ; i <= dan; i++){
+        for(var j = 0; j <= dan-i; j++){
+        document.write(" ");
+        }
+        for(var j=0; j < i*2 -1; j++){
+            document.write("*");
+        }
+    document.write("</br>");
+   }
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    // confirm은 질문에 대해서 확인, 취소만 있는
+    // 팝업창을 띄워줌
+    // prompt와 유사하지만 사용자는 오직 예, 아니요만
+    // 선택 가능하며 예 선택시 true, 아나오 선택시 false를 저장할수 있음
+    // confirm("안내문");형식으로 사용
+   var result = confirm("자바스크립트 재미있나요?");
+    
+    var vote = result ? "재미있다" : "재미없다";
+    console.log(typeof(vote));
+    document.write(vote);
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>
