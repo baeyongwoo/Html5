@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    //DOM 내부 요소를 고치는 작업
+    //DOM조작과 onclick 이벤트를 같이 조합해서
+    //사용자가 특정 요소를 클릭했을 때 DOM조작이
+    //일어나도록 하는것이 일반적
+    //DOM조작이라는 용어는 그냥 html코드에 변화를 주는 작업
+
+    //모든 문서 로딩이 끝난 뒤 스크립트 실행
+    window.onload = function(){
+        var number = document.getElementById('number');
+        var incbtn = document.getElementById('increases');
+        var decbtn = document.getElementById('decreases')
+
+        console.log(number);
+        console.log(incbtn.parentNode.parentNode);
+        console.log(decbtn.parentNode.parentNode);
+
+        //div를 변수에 저장하고 콘솔에 찍기
+        //1. 태그이름으로 얻어오기
+        var divtag = document.getElementsByTagName("div")[0];
+        //getElementsByTagName으로 얻어오는 경우
+        //htmlCollection이라는 리스트로 얻어와짐
+        //따라서 인덱싱을 통해 마지막까지 지정
+        console.log(divtag);
+
+        //2. childNodes로 자식태그들 얻어오기
+        //단, 자식태그에는 html문서상 개행을 위해
+        //친 엔터키까지 text로 잡혀나오므로 주의.
+        console.log(divtag.childNodes[1]);
+
+        //3. children으로 자식태그 얻어오기
+        // children은 개행문자등을 생략하고
+        // 태그요소만 가져오는 특성을 가지고 있음
+        console.log(divtag.children);
+
+        //4. 일일 인덱싱으로 가져오기 복잡한 경우
+        // 첫 번째 요소나 마지막 요소등은 근접 선택자에서
+        //따로 선택할수 있는 솝션을 제공
+        //firstChild - 첫 자식 태그
+        //lastChild - 마지막 자식 태그
+        console.log(divtag.firstChild);
+
+        //5. previousSibling, nextSibling을 통해
+        //형제 태그간 순번을 하나씩 뒤로 넘기거나
+        //하나씩 앞으로 가져올 수 있음
+        //reset을 잡아서 변수에 저장
+        //위 두 명령을 이용해 increases와, decreases을 콘솔에 찍기
+        var reset = document.getElementById('reset');
+        //태그 요소를 Element(요소)라고 부르므로
+        //태그요소만 얻어오고 싶다면 Element가 붙은것을 호출하면 됨
+        console.log(reset.previousElementSibling);
+        console.log(reset.nextElementSibling);
+
+        //이제 이벤트를 자바스크립트로 붙여서
+        //버튼 클릭시 숫자가 변하도록 하자
+        //#number, #reset, #increase, #decreases
+        //를 변수에 담기
+        var numberbtn = document.getElementById('number');
+        var resetbtn = document.getElementById('reset');
+        var increbtn = document.getElementById('increases');
+        var decrebtn = document.getElementById('decreases');
+
+        // increases버튼 클릭시 숫자가 증가하게 만드는 코드
+        increbtn.onclick = function(){
+            //#number 태그 내부 숫자를 얻어와 10진수로 정수화 시킴
+            //innerText는 태그 사이의 문자열만 얻어올때
+            //사용하면 되며, 아래와 같이
+            //inerText에 대입해 갱신할 수 있음
+            current = parseInt(numberbtn.innerText, 10);
+
+            // 태그 내부 숫자에 1을 더해 다시
+            // 내부 텍스트로 갱신시켜준다
+            numberbtn.innerText = current + 1;
+        }
+
+        resetbtn.onclick = function(){
+            numberbtn.innerText = 0;
+        }
+
+        decrebtn.onclick = function(){
+            current = parseInt(numberbtn.innerText, 10);
+
+            if(current<=0){
+                alert("0아래로는 내릴 수 없습니다.");
+                number.innerText = 0;
+            } else if(current > 0){
+                numberbtn.innerText = current - 1;
+                
+            }
+        }
+
+        //각 색깔 버튼 클릭시 글씨색이 바뀌도록 이벤트
+        var redbtn = document.getElementById("red");
+        var bluebtn = document.getElementById("blue");
+        var blackbtn = document.getElementById("black");
+
+        redbtn.onclick = function(){
+            redbtn.style.color ="red";
+            numberbtn.style.color ="red";
+            
+        }
+        
+        bluebtn.onclick = function(){
+            bluebtn.style.color="blue";
+            numberbtn.style.color="blue";
+        }
+        
+        blackbtn.onclick = function(){
+            blackbtn.style.color="black"
+            numberbtn.style.color="black"
+        }
+
+
+        
+
+
+    }
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <h2 id="number">0</h2>
+    <div>
+    <button id="increases"> +1</button>
+    <button id="reset">0</button>
+    <button id="decreases">-1</button>
+    <br>
+    <button id="red">빨간색</button>
+    <button id="blue">파란색</button>
+    <button id="black">검은색색</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    // 
+    var i = 10;//전역변수
+    var num = 20; //전ㅇ녁변수
+
+    function theTest() {
+        var num = i + 200;
+        alert(num);//자기 지역 우선 호출
+        
+    }
+    theTest(); //지역 생성되었다가 소멸
+
+    function theFunc() {
+        document.write(num)
+    }
+    theFunc();
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>

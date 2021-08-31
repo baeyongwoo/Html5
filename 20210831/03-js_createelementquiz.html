@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    // #h1spcae 내부에 #createeh1을 클릭할 때마다
+    // h1태그(넣고싶은 단어를 아무거나 넣어주세요)가 생성되는 로직
+    window.onload = function(){
+        // var newbtn = document.createElement("button");
+        // var newdiv = document.createElement("div");
+        
+        // var text =  document.createTextNode("h1생성");
+
+        // newbtn.setAttribute("id", "createeh1");
+        // newbtn.setAttribute("id", "h1space");
+
+        // newbtn.appendChild(text);
+        // newdiv.appendChild(newbtn);
+
+        // var bodyTag = document.getElementsByTagName("body")[0];
+
+        // bodyTag.appendChild(newdiv);
+        // console.log(bodyTag);
+
+        //버튼 가져오기
+        var ch1 = document.getElementById("createh1");
+        //h1을 적재할 태그 가져오기
+        var h1space = document.getElementById("h1space");
+
+        //버튼에 onclick 이벤트 연결
+        ch1.onclick = function(){
+            //h1 생성
+            var newH1 = document.createElement("h1")
+            //h1에 끼워넣을 텍스트 생성
+            var text = document.createTextNode("증식하는 h1");
+            //text를 h1에 조립
+            newH1.appendChild(text);
+            // 조립완료된 h1를 h1space에 끼워넣기
+            h1space.appendChild(newH1);
+        }
+
+    }
+    
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <div id="h1space">
+
+    </div>
+    <button id="createh1" onclick="ch1">h1생성</button>
+</body>
+</html>

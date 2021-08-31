@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    //원거리 선택자.
+    //태그에 지정한 id를 이용해 특정 태그만 선택할 수 있는
+    //선택자
+    //선택대상.getElementById("아이디명");
+
+    //문서 로딩이 끝난 다음에 호출하도록
+    //window.onload 내부에 작성
+    window.onload = function () {
+        //여기에 작성해야 정상 실행
+        var myObj = document.getElementById("title");
+        console.log(myObj);
+        myObj.style.color = "blue";
+        console.log(myObj);
+
+        //특정 태그들을 들고오기
+        //선택대상.getElementsByTagName("태그명");
+
+        //1.ui요소들 전체 선택
+        var myList = document.getElementsByClassName("ul");
+        //2. ul > li인 요소들 선택
+        var myObjs = myList[0].getElementsByTagName("li")[1];
+        console.log(myObjs);
+        
+    }
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <div>
+        <h1>선택자</h1>
+        <h2 id="title">원거리 선택자</h2>
+        <ul>
+            <li>getElementById</li>
+            <li>getElementByTagName</li>
+        </ul>
+        <h2>근거리 선택자</h2>
+        <ul id="list">
+            <li>parentNode</li>
+            <li>childNodes</li>
+            <li>children</li>
+            <li>firstChild</li>
+            <li>previousSibling</li>
+            <li>nextSibling</li>
+        </ul>
+    </div>
+
+</body>
+</html>

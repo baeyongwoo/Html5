@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    document.write("<h1>현재날짜/시간정보</h1>");
+
+    var today = new Date();
+    var nowMonth = today.getMonth(); + 1 //(월 0~11)
+    var nowDate = today.getDate(); //일
+    var nowDay = today.getDay(); //요일 (0: 일 ~ 6 : 토)
+    var nowHours = today.getHours(); //현재시간
+    var nowMinutes = today.getMinutes();
+    var nowSeconds = today.getSeconds();
+    var nowTime = today.getTime();
+    var nowYear = today.getFullYear();
+
+    document.write("년" + nowYear + "</br>");
+    document.write("월" + nowMonth + "</br>");
+    document.write("일" + nowDate + "</br>");
+    document.write("요일" + nowDay + "</br>");
+    document.write("시" + nowHours + "</br>");
+    document.write("분" + nowMinutes + "</br>");
+    document.write("초" + nowSeconds + "</br>");
+    document.write("유닉스시간" + nowTime + "</br>");
+
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>
