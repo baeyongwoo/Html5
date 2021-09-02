@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+
+    h2 {color:aqua;}
+
+    .list {color: blueviolet;}
+</style>
+<script>
+    // 화면 중간에 "메뉴" 라고 적힌 요소를 하나 만들고
+    // 거기 마우스를 가져다 대면 음식메뉴가 보이고
+    // ex)피자 : 20000원
+    //    치킨 : 25000원
+    //    탕수육 : 300000원 과 같은 식으로 메뉴는 5개
+    // 마우스를 메뉴라고 적힌 요소에서 치우면 보이지 않게
+    // jquery를 이용해 만들기
+
+    $(() => {
+    $("#menuba").hover(function(){
+        $(".list").css("display", "block");
+    }, function(){
+        $(".list").css("display", "none");
+    })
+
+
+
+    });
+
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+    <h2>음식 메뉴와 가격표</h2>
+    <div id="menuba">
+        <h3><button>요리 메뉴</button></h3>
+            <ul class="list">
+                <li>치킨 : 20,000원</li>
+                <li>피자 : 25,000원</li>
+                <li>탕수육 : 30,000원</li>
+                <li>돈까스 : 10,000원</li>
+                <li>잔치국수 : 7,000원</li>
+            </ul>
+        
+       
+
+    </div>
+
+</body>
+</html>

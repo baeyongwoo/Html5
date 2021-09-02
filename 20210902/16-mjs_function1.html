@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+
+</style>
+<script>
+    //ES6 이전에는 함수를 여러가지 형태로 사용해왔다
+    //일반 함수, 생성자 함수, 메서드 등으로 별의별 방식으로
+    //활용할 수 있엇지만 실수유발이 쉽다는 점과
+    //메모리 낭비 차원의 문제가 발생되었음
+
+    //자바 스크립트에서는 함수를 "일급 객체"라고 부름
+    //일급 객체란 변수에 저장될 수 있는 요소를 지칭하는 단어
+    //아래와 같이 함수를 변수 foo에 저장해서 사용할 수 있음
+    var foo = 
+        function(){
+            return 1;
+    }
+
+    console.log(foo);
+
+    function abc(){
+        return 2;
+    }
+
+    // 일반적인 함수로서 저장된 함수 호출
+    // 변수명();
+    abc();
+
+    console.log(foo());
+
+    //생성자 함수로써 호출
+    new foo(); //=> foo{}
+
+    //메서드로서 호출
+    //좌측의 이름을 이용해서 우측의 자료를 실행한다
+    var obj = {ddd:foo};
+    obj.ddd();
+    console.log(obj);
+</script>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+</body>
+</html>
